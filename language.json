@@ -1,0 +1,113 @@
+{
+  "pl": {
+    "screen_home": [
+      "Lista kategorii",
+      "Edytuj...",
+      "WSTECZ",
+      "Akceptuj",
+      "Wykasuj kategorię",
+      "Napewno wykasować kategorię",
+      "TAK, wykasować"
+    ],
+    "screen_add_category": [
+      "Dodawanie kategorii",
+      [
+        "Dodaj",
+        "Kategorię"
+      ],
+      "Wpisz kategorię",
+      "Zapisz",
+      "Kategorię dodano",
+      "Już jest taka kategoria"
+    ],
+    "screen_result": [
+      "Dodaj link",
+      "Wklej link",
+      "Opis linku",
+      "Dodaj krótki opis linku",
+      "Dodaj link",
+      "Taki link juz jest",
+      "Link dodano",
+      "Uwaga! Taki link nie istnieje..",
+      "Edytuj...",
+      "WSTECZ",
+      "Akceptuj",
+      "Opis aktualizowano",
+      "Napewno wykasować link???",
+      "Wykasować?",
+      "Link wykasowano!!!",
+      "Dodawanie foto do linka",
+      "Wklej url foto z Github",
+      "Zamknij",
+      "Wklej url do fotki",
+      "Zapisz link",
+      "To nie jest link z Github albo zły url"
+    ],
+    "screen_settings": [
+      "Ustawienia",
+      "Tapeta",
+      "Ciemna",
+      "Jasna",
+      "Język",
+      "Paleta kolorów",
+      "Polski"
+    ]
+  },
+  "ukr": {
+    "screen_home": [
+      "Список категорiй",
+      "Редагування...",
+      "Назад",
+      "ТАК",
+      "Видалення",
+      "Видалити категорію",
+      "Так"
+    ],
+    "screen_add_category": [
+      "Додавання категорiй",
+      [
+        "Додай",
+        "Категорiю"
+      ],
+      "Впиши категорію",
+      "Збережи",
+      "Категорiю додано",
+      "Вже є така категорія"
+    ],
+    "screen_result": [
+      "Додай посилання",
+      "Вставити посилання",
+      "Опис посилання",
+      "Короткий опис посилання",
+      "Додай посилання",
+      "Посилання вже є",
+      "Посилання записано",
+      "Увага! Таке посилання не iснує..",
+      "Редагування...",
+      "Нi",
+      "Так",
+      "Опис посилання оновлено",
+      "Видалити посилання???",
+      "Так",
+      "Посилання видалена!!!",
+      "Додавання фотки до посилання",
+      "Встав url фотки з Github",
+      "Закрити",
+      "Встав url з фотографii",
+      "Зберегти посилання",
+      "Це посилання не з Github чи якась помилка"
+    ],
+    "screen_settings": [
+      "Установки",
+      "Шпалери",
+      "Темнi",
+      "Свiтлi",
+      "Мова",
+      "Колір палітри",
+      "Українська"
+    ]
+  },
+  "count_app": {
+    "count": 5
+  }
+}
