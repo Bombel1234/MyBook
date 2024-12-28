@@ -1,0 +1,11 @@
+<BaseListItemWithSwitch>
+    divider:None
+    _no_ripple_effect:True
+    on_size:self.ids._right_container.height = dp(64)
+    RightSwitchContainer:
+        active:root.active
+        on_active:root.dispatch('on_active', self, self.active)
+        icon_active: "check"
+        icon_inactive: "check"
+        thumb_color_active: "red"
+        thumb_color_inactive:'green'

@@ -1,0 +1,176 @@
+#:import Animation kivy.animation.Animation
+
+<ResultationScreenView>
+    md_bg_color: app.theme_cls.bg_darkest
+    MDBoxLayout:
+        orientation:'vertical'
+        id:box_top
+        MDTopAppBar:
+            id:tb
+            left_action_items: [["arrow-left", lambda x: root.controller.back_home()]]
+        MDRelativeLayout:
+            MDBoxLayout:
+                id:top_box
+                adaptive_height:True
+                orientation:'vertical'
+                padding:'20dp'
+                spacing:'20dp'
+                y:root.height
+                MDLabel:
+                    text:root.label_url
+                    adaptive_height:True
+                    halign:'center'
+                    font_size:'28sp'
+                    bold:True
+                MDTextField:
+                    id:inp_url
+                    hint_text:root.inp1_text
+                    line_color_normal: "blue"
+                    line_color_focus:"blue"
+                    hint_text_color_focus: "red"
+                    hint_text_color_normal:'red'
+                    text_color_normal: "blue"
+                    font_size:'22sp'
+                MDLabel:
+                    text:root.label_ops
+                    adaptive_height:True
+                    halign:'center'
+                    font_size:'28sp'
+                    bold:True
+                MDTextField:
+                    id:inp_tres
+                    hint_text:root.input2_text
+                    line_color_normal: "blue"
+                    line_color_focus:"blue"
+                    hint_text_color_focus: "red"
+                    hint_text_color_normal:'red'
+                    text_color_normal:"blue"
+                    font_size:'22sp'
+            MDRectangleFlatButton:
+                id:btn
+                text:root.text_btn
+                pos_hint:{'center_x':.5, 'center_y':.9}
+                padding:[50,0,50,0]
+                font_size:'20sp'
+                on_release:
+                    root.animation_add_link(self, top_box)
+                    root.add_url_in_base(inp_url.text, inp_tres.text, self, top_box)
+            MDScrollView:
+                y:btn.top - self.height - btn.height - dp(15)
+                size_hint_y:None
+                height:root.height - (tb.height + btn.height + dp(40))
+                MDList:
+                    padding:'15dp'
+                    adaptive_height:True
+                    spacing:20
+                    id:box_card
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#        MDBoxLayout:
+#            adaptive_height:True
+#            orientation:'vertical'
+#            padding:'20dp'
+#            spacing:'20dp'
+#            pos_hint:{'center_x':.5, 'center_y':.9}
+#            MDLabel:
+#                text:'Dodaj url'
+#                adaptive_height:True
+#                halign:'center'
+#                font_size:'28sp'
+#                bold:True
+#            MDTextField:
+#                id:inp_url
+#                hint_text:'Paste link'
+#                line_color_normal: "blue"
+#                line_color_focus:"blue"
+#                hint_text_color_focus: "red"
+#                hint_text_color_normal:'red'
+#                text_color_normal: "blue"
+#                font_size:'22sp'
+#            MDLabel:
+#                text:'Opis linku'
+#                adaptive_height:True
+#                halign:'center'
+#                font_size:'28sp'
+#                bold:True
+#            MDTextField:
+#                id:inp_tres
+#                hint_text:'Dodaj krotki opis linku'
+#                line_color_normal: "blue"
+#                line_color_focus:"blue"
+#                hint_text_color_focus: "red"
+#                hint_text_color_normal:'red'
+#                text_color_normal:"blue"
+#                font_size:'22sp'
+#        MDRectangleFlatButton:
+#            text:'Dodaj link'
+#            pos_hint:{'center_x':.5}
+#            padding:[50,0,50,0]
+#            font_size:'20sp'
+#            on_release:
+#                #root.add_url_in_base(inp_url.text, inp_tres.text)
+#        MDScrollView:
+#            MDList:
+#                padding:'15dp'
+#                adaptive_height:True
+#                spacing:20
+#                id:box_card
+#        MDBoxLayout:
+#            id:box_info
+#            adaptive_height:True
+#            orientation:'vertical'
+#            padding:'20dp'
+#            spacing:'20dp'
+#            pos_hint:{'top':1}
+#            MDLabel:
+#                text:'Dodaj url'
+#                adaptive_height:True
+#                halign:'center'
+#                font_size:'28sp'
+#                bold:True
+#            MDTextField:
+#                id:inp_url
+#                hint_text:'Paste link'
+#                line_color_normal: "blue"
+#                line_color_focus:"blue"
+#                hint_text_color_focus: "red"
+#                hint_text_color_normal:'red'
+#                text_color_normal: "blue"
+#                font_size:'22sp'
+#            MDLabel:
+#                text:'Opis linku'
+#                adaptive_height:True
+#                halign:'center'
+#                font_size:'28sp'
+#                bold:True
+#            MDTextField:
+#                id:inp_tres
+#                hint_text:'Dodaj krotki opis linku'
+#                line_color_normal: "blue"
+#                line_color_focus:"blue"
+#                hint_text_color_focus: "red"
+#                hint_text_color_normal:'red'
+#                text_color_normal:"blue"
+#                font_size:'22sp'
+
+
+
+

@@ -1,0 +1,74 @@
+#:import Window kivy.core.window.Window
+
+<CardList>
+    padding:'5dp'
+    size_hint_y:None
+    height:Window.height - box_text.height - btn_link.height - dp(30)
+    md_bg_color: '#ACE5EE'
+    on_enter:
+        root.md_bg_color = '#69FFBB'
+    on_leave:
+        root.md_bg_color = '#ACE5EE'
+    orientation:'vertical'
+    MDBoxLayout:
+        size_hint_y:1
+        orientation:'vertical'
+        MDBoxLayout:
+            adaptive_height:True
+            padding:'10dp'
+
+            MDGridLayout:
+                rows:1
+                cols:4
+                adaptive_height:True
+                spacing:'20dp'
+                MDFloatingActionButton:
+                    id:btn_link
+                    icon:'play'
+                    icon_size:'36dp'
+                    size_hint_x:1
+
+                MDFloatingActionButton:
+                    id:btn_delete
+                    icon: 'trash-can-outline'
+                    icon_size:'36dp'
+                    size_hint_x:1
+                MDFloatingActionButton:
+                    id:btn_edit
+                    icon:'pencil'
+                    size_hint_x:1
+                MDFloatingActionButton:
+                    id:btn_img
+                    icon:'plus'
+                    size_hint_x:1
+        FitImage:
+            id:img
+            source:root.img_path
+            size_hint_x:1
+            radius:['16dp', '16dp', 0, 0]
+
+
+    MDBoxLayout:
+        id:box_text
+        adaptive_height:True
+        padding:'15dp'
+
+        MDLabel:
+            id: label
+            text: root.text
+            theme_text_color:'Custom'
+            text_color:'black'
+            adaptive_height:True
+            font_size:'28sp'
+            bold: True
+
+
+
+
+
+
+
+
+
+
+

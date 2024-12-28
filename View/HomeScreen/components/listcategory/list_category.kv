@@ -1,0 +1,31 @@
+<ListCategory>
+    size_hint_y:None
+    height:'140dp'
+    md_bg_color: '#ACE5EE'
+    on_enter:root.md_bg_color = '#69FFBB'
+    on_leave:root.md_bg_color = '#ACE5EE'
+    MDRelativeLayout:
+        MDLabel:
+            id:label_text
+            text:'Pierwsze dania'
+            pos_hint:{'center_x':.5, 'center_y':.6}
+            adaptive_size:True
+            font_size:'24sp'
+            theme_text_color:'Custom'
+            text_color:'black'
+        MDIconButton:
+            id:btn_edit
+            icon:'pencil'
+            pos_hint:{'right':1, 'top':1}
+            icon_size:'32dp'
+            theme_icon_color: "Custom"
+            icon_color: 'black'
+        MDIconButton:
+            id:btn_delete
+            icon:'trash-can-outline'
+            pos_hint:{'right':1, 'bottom':1}
+            icon_size:'32dp'
+            theme_icon_color: "Custom"
+            icon_color: 'black'
+
+

@@ -1,0 +1,87 @@
+<MyField@MDTextField>
+    size_hint_x: None
+    width: '200'
+    text_color: "000000"
+
+    required: True
+    helper_text: "This field is required"
+    helper_text_mode: "on_error"
+
+    color_mode: 'custom'
+    line_color_focus: 'c06ef0'
+
+    multiline: False
+    background_color: (1, 1, 1)
+    background_normal:''
+<TooltipButton@Button>
+    tooltip_bg_color: [192/256,110/256,240/256,1]
+
+<ShowDialog@Popup>
+    auto_dismiss: False
+    title: 'Регистрация'
+    separator_color: (192/256,110/256,240/256,1)
+    size_hint:None,None
+    size:(400,550)
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgb: (1,1,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: "vertical"
+        adaptive_size: True
+        GridLayout:
+            cols:3
+            rows:1
+            size_hint_y:None
+            height:50
+            padding:75,0,10,0
+        # имя пациента
+            MyField
+                id: pet_name_input
+                hint_text: 'Имя пациента'
+                pos_hint: {"center_x": .30}
+        GridLayout:
+            cols:2
+            padding:75,0,0,0
+
+        # дата рождения
+            MyField:
+                id: birth_date_input
+                hint_text: 'Дата рождения'
+                helper_text: 'YYYY-MM-DD'
+                helper_text_mode: 'on_focus'
+                max_text_length: 10
+            TooltipButton:
+                tooltip_text: 'календарь'
+                size_hint:None,None
+                size: "40sp", "40sp"
+                background_color:0,0,0,0
+            MyField:
+                id: last_appointment_date_input
+                hint_text: 'Дата последнего посещ-ия'
+                helper_text: 'YYYY-MM-DD'
+                helper_text_mode: 'on_focus'
+                max_text_length: 10
+            TooltipButton:
+                tooltip_text: 'календарь'
+                size_hint: None, None
+                size: "40sp", "40sp"
+                background_color:0,0,0,0
+        GridLayout:
+            cols: 1
+            rows: 2
+            padding: 100, 0, 0, 0
+            spacing: 10
+            MDFillRoundFlatButton:
+                text: '  Добавить информацию  '
+                text_color: 0, 0, 0, 1
+                line_color: 0, 0, 0, 1
+                pos_hint: {"center_x": .5,"center_y":.5}
+            MDFillRoundFlatButton:
+                text: 'Вернуться в главное меню'
+                on_press: root.dismiss()
+                text_color: 0, 0, 0, 1
+                line_color: 1, 0, 1, 1
+                pos_hint: {"center_x": .5,"center_y":.5}

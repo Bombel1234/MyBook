@@ -1,0 +1,39 @@
+<AddLinkScreenView>
+    MDBoxLayout:
+        orientation:'vertical'
+        MDTopAppBar:
+            title:root.title_screen
+            left_action_items: [["arrow-left", lambda x: root.controller.move_back_home()]]
+        MDAnchorLayout:
+            MDBoxLayout:
+                orientation:'vertical'
+                adaptive_height:True
+                size_hint_x:None
+                width:'380dp'
+                spacing:'35dp'
+                MDLabel:
+                    markup:True
+                    text:root.title
+                    halign:'center'
+                    font_size:'48sp'
+                    bold:True
+                    padding:0,0,0, '28dp'
+                    italic:True
+                    outline_color:0, 0, 1
+                    outline_width:2
+
+                MDTextField:
+                    id:input
+                    hint_text:root.input_text
+                    size_hint_x:.85
+                    font_size:'36sp'
+                    mode:'rectangle'
+                    pos_hint:{'center_x':.5}
+                MDFillRoundFlatIconButton:
+                    id:btn
+                    text:root.text_btn
+                    icon:'plus'
+                    pos_hint:{'center_x':.5}
+                    padding:'40dp', '7dp', '40dp', '7dp'
+                    font_size:'22sp'
+                    on_release:root.add_category(input.text, input)

@@ -1,0 +1,81 @@
+<SettingsScreenView>
+    md_bg_color: app.theme_cls.bg_darkest
+    MDBoxLayout:
+        orientation:'vertical'
+        MDTopAppBar:
+            title:root.title_screen
+            left_action_items: [["arrow-left", lambda x: root.controller.back_home()]]
+        MDBoxLayout:
+            id:box
+            orientation:'vertical'
+            adaptive_height:True
+            padding:'10dp', '24dp', '10dp', 0
+            spacing:'20dp'
+            MDLabel:
+                text:'Privace'
+                font_size:'22sp'
+                adaptive_height:True
+                padding_x:'18dp'
+            MDSeparator:
+            TwoLineListItemWithSwitch:
+                id:item1
+                text: root.theme
+                active:False
+                on_active:
+                    root.switch_theme_select(self, self.active)
+            TwoLineListItemWithSwitch:
+                id:item2
+                text: root.lang
+                on_active:root.switch_language_select(self, self.active)
+            MDWidget:
+                size_hint_y:None
+                height:'150dp'
+            MDBoxLayout:
+                adaptive_height:True
+                MDBoxLayout:
+                    orientation:'vertical'
+                    padding:0,0,0,'80dp'
+                    MDLabel:
+                        padding_x:'20dp'
+                        text:root.palette_color
+                        adaptive_height:True
+                    MDLabel:
+                        text:root.select_color
+                        padding_x:'20dp'
+                        adaptive_height:True
+
+
+                MDBoxLayout:
+                    adaptive_height:True
+                    size_hint_x:None
+                    width:'120dp'
+                    padding:'20dp', 0
+                    height:'200dp'
+                    canvas:
+                        Color:
+                            rgba: .1, .1, 1, .9
+                        Line:
+                            width: 2.
+                            rectangle: (self.x, self.y, self.width, self.height)
+                    FadeScrollView:
+                        bar_width:0
+                        fade_height: self.height / 100
+                        edge_bottom:False
+                        pull_duration:2
+                        interval:40
+                        MDBoxLayout:
+                            id:box_palette
+                            adaptive_height:True
+                            orientation:'vertical'
+                            spacing:'20dp'
+
+        MDWidget:
+    MDIcon:
+        icon:'cog'
+        font_size:'300sp'
+        pos_hint:{'center_x':.5, 'center_y':.5}
+        theme_text_color:'Custom'
+        text_color:'white' if root.theme_cls.theme_style == "Dark" else 'gray'
+        opacity:.4
+
+

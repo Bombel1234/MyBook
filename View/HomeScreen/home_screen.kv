@@ -1,0 +1,40 @@
+<HomeScreenView>
+    FitImage:
+        source:root.img
+        height:root.height
+
+    MDBoxLayout:
+        orientation: "vertical"
+        MDTopAppBar:
+            title:root.title_screen
+            right_action_items: [["assets/images/icons8-settings-64.png", lambda x: root.controller.go_screen_settings()]]
+            left_action_items:[["assets/images/book.png", lambda x:root.controller.open_dialog_info()]]
+        MDAnchorLayout:
+            padding:'24dp'
+            MDScrollView:
+                size_hint_x:1
+                bar_width:0
+                MDList:
+                    id:box
+                    spacing:'20dp'
+    MDIconButton:
+        icon:'plus'
+        icon_size:'74sp'
+        pos_hint:{'center_x':.5, 'bottom':.83}
+        on_release:root.controller.move_screen_add_link()
+        theme_icon_color: "Custom"
+        icon_color: 'red'
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 1
+            Line:
+                width: 6
+                circle:
+                    (\
+                    self.center_x, \
+                    self.center_y, \
+                    min(self.width, self.height) / 2.5, \
+                    0, \
+                    360, \
+                    )
+
